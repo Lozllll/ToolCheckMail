@@ -79,9 +79,9 @@ def fakeEmail():
   print (Fore.WHITE + Style.BRIGHT + ' [ \033[0;37mTool Random Email ]')
   print ('')
   data_kytu = ['', '_', '.']
-  so_luong = int(input(Fore.WHITE + Style.BRIGHT + " \033[0;33m-Nhập Số Lượng : "))
-  Domain = input(Fore.WHITE + Style.BRIGHT + " \033[1;97m-Nhập Domain(ex: yahoo) : ")
-  file_email = input(Fore.WHITE + Style.BRIGHT + " \033[1;93m-Nhập File Lưu(mail.txt) : ")
+  so_luong = int(input(Fore.WHITE + Style.BRIGHT + " \033[0;33m-Nhập Lượng Mail : "))
+  Domain = input(Fore.WHITE + Style.BRIGHT + " \033[1;97m-Nhập Đuôi mail(ex: yahoo) : ")
+  file_email = input(Fore.WHITE + Style.BRIGHT + " \033[1;93m-Nhập File Lưu mail(mail.txt) : ")
   n = 0
   for fake in range(so_luong):
     n += 1
@@ -99,10 +99,10 @@ def checkhotmail():
   print ('')
   print (Fore.WHITE + Style.BRIGHT + ' [ \033[1;35mTool Check Hotmail ]')
   print ('')
-  print (Fore.WHITE + Style.BRIGHT + " \033[1;34m•CÓ THỂ NHẬP ĐỊNH DẠNG MAIL|PASS")
+  print (Fore.WHITE + Style.BRIGHT + " \033[1;34m•Có thể nhập dạng MAIL|PASS")
   s = session()
   n_hotmail = 0
-  hotmail = open(input(Fore.WHITE + Style.BRIGHT + " \033[0;34m-Nhập File Hotmail(hotmail.txt) : ")).readlines()
+  hotmail = open(input(Fore.WHITE + Style.BRIGHT + " \033[0;34m-Nhập File tạo Hotmail(hotmail.txt) : ")).readlines()
   hotmail_die = input(Fore.WHITE + Style.BRIGHT + " \033[1;96m-Nhập File Lưu Hotmail Die(lienketfb.txt) : ")
   for line_hotmail in hotmail:
     n_hotmail += 1
@@ -122,10 +122,10 @@ def checkyahoo():
   print ("")
   print (Fore.WHITE + Style.BRIGHT + " [ \033[1;91mTool Check Yahoo ]")
   print ("")
-  print (Fore.WHITE + Style.BRIGHT + " •CÓ THỂ NHẬP ĐỊNH DẠNG MAIL|PASS")
+  print (Fore.WHITE + Style.BRIGHT + " •Có thể nhập dạng MAIL|PASS")
   n_yahoo = 0
   yahoo = open(input(Fore.WHITE + Style.BRIGHT + " \033[0;33m-Nhập File Yahoo(yahoo.txt) : ")).readlines()
-  yahoo_die = input(Fore.WHITE + Style.BRIGHT + " \033[0;33m-Nhập File Lưu Yahoo Die(yahoo.txt) : ")
+  yahoo_die = input(Fore.WHITE + Style.BRIGHT + " \033[0;33m-Nhập File Save Yahoo Ko sử dụng được(yahoo.txt) : ")
   for line_yahoo in yahoo:
     n_yahoo += 1
     yid = line_yahoo[0:line_yahoo.index('@')]
@@ -200,9 +200,9 @@ def checkvalid():
   print (Fore.WHITE + Style.BRIGHT + ' [ \033[1;96mTool Facebook ]')
   print ('')
   n_valid = 0
-  print (Fore.WHITE + Style.BRIGHT + " \033[0;33m•KHÔNG HỖ TRỢ ĐỊNH DẠNG MAIL|PASS.")
-  print (Fore.WHITE + Style.BRIGHT + " \033[0;33m•FAKE IP TRƯỚC KHI CHECK. FACEBOOK BLOCK IP TRONG TRƯỜNG HỢP SPAM.")
-  print (Fore.WHITE + Style.BRIGHT + " \033[1;90m• TOOL CHECK SAI THÌ MỞ SOURCE CODE LÊN, RỒI THAY LẠI CÁI COOKIE FB MỚI VÀ CÁI DATA")
+  print (Fore.WHITE + Style.BRIGHT + " \033[0;33m•Không support dạng MAIL|PASS.")
+  print (Fore.WHITE + Style.BRIGHT + " \033[0;33m• HÃY FAKE IP TRƯỚC KHI CHECK, FACEBOOK SẼ BLOCK IP TRONG TRƯỜNG HỢP CÁC BẠN SPAM.")
+  print (Fore.WHITE + Style.BRIGHT + " \033[1;90m• NẾU TOOL CHECK SAI THÌ MỞ SOURCE CODE LÊN, RỒI THAY LẠI CÁI COOKIE FB MỚI VÀ CÁI DATA")
   fileEmail = open(input(Fore.WHITE + Style.BRIGHT + " \033[1;33m-Nhập File Chứa Email(ex: email.txt) : ")).readlines()
   valid = input(Fore.WHITE + Style.BRIGHT + " \033[1;33m-Nhập File Lưu Email LK Facebook(ex: validfb.txt) : ")
   for email_fb in fileEmail:
@@ -255,13 +255,13 @@ def checkvalid():
       check_code = requests.get('https://m.facebook.com/recover/code/?em%5B0%5D='+email_fb+'&rm=send_email&c=%2Flogin%2F&hash=AUZazPQa8aS2XXY-nBM&_rdr', headers=headers1)
       kq_check_code = re.search("Nhập mã gồm 8 chữ số",check_code.text)
       if kq_check_code == None:
-        print (Fore.GREEN + Style.BRIGHT + " [" + str(n_valid) + "] |Có Liên Kết|Code 6|" + email_fb)
+        print (Fore.GREEN + Style.BRIGHT + " [" + str(n_valid) + "] |Yes|Code 6|" + email_fb)
         open(valid,"a").write("|code 6|" + email_fb)
       else:
-        print (Fore.GREEN + Style.BRIGHT + " [" + str(n_valid) + "] |Có Liên Kết|Code 8|" + email_fb)
+        print (Fore.GREEN + Style.BRIGHT + " [" + str(n_valid) + "] |Yes|Code 8|" + email_fb)
         open(valid,"a").write("|code 8|" + email_fb)
     else:
-      print (Fore.RED + Style.BRIGHT + " [" + str(n_valid) + "] |Không Có Liên Kết|" + email_fb)
+      print (Fore.RED + Style.BRIGHT + " [" + str(n_valid) + "] |No|" + email_fb)
   process_menu()
   
   
@@ -275,7 +275,7 @@ ____  _     _____ ____ _  __ _      ____  _  _
 \____/\_/ \|\____\\____|_|\_\\_/  \|\_/ \|\_/\____/ 
 
                 Copyright:  Võ Hoàng Nam
-                 Zalo : 0356218930
+               
 """
   print (logo)
   
@@ -283,11 +283,11 @@ ____  _     _____ ____ _  __ _      ____  _  _
 def process_menu():
   menu = """
                 [-----------------------------]
-                    \033[1;31m1. Tool Create Mail Ngẫu nhiên
-                    \033[1;33m2. Tool Kiểm Tra Hotmail
+                    \033[1;33m1. Tool Create Mail Ngẫu nhiên
+                    \033[1;31m2. Tool Kiểm Tra Hotmail
                     \033[1;36m3. Tool Kiểm Tra Yahoo mail
-                    \033[1;36m4. Tool Kiểm Tra Valid
-                    \033[0;37m5. Exit
+                    \033[1;37m4. Tool Kiểm Tra Valid
+                    \033[0;36m5. Exit
                 [-----------------------------]
 """
   print (Fore.WHITE + Style.BRIGHT + menu)
