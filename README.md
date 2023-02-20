@@ -5,7 +5,21 @@ Gmail
 Hotmail
 Yahoo
 
-# Cài đặt
+# Cài đặt (Install)
+pkg install python
+
+pkg install git
+
+pkg install openssl
+
+apt upgrade -y
+
+pip install faker
+
+pip install colorama
+
+pip install requests
+
 git clone https://github.com/Lozllll/ToolCheckMail.git
 
 cd ToolCheckMail
