@@ -268,10 +268,11 @@ def checkvalid():
 def logo():
   logo = """
 
-\033[1;36m▀▀█▀▀ █▀▀█ █▀▀█ █░░   \033[1;90m█▀▀ █░░█ █▀▀ █▀▀ █░░█ 
-\033[1;35m░░█░░ █░░█ █░░█ █░░   \033[1;97m█░░ █▀▀█ █▀▀ █░░ █▀▀█  
-\033[1;96m░░▀░░ ▀▀▀▀ ▀▀▀▀ ▀▀▀   \033[1;94m▀▀▀ ▀░░▀ ▀▀▀ ▀▀▀ ▀░░▀  
-
+____  _     _____ ____ _  __ _      ____  _  _    
+/   _\/ \ /|/  __//   _Y |/ // \__/|/  _ \/ \/ \   
+|  /  | |_|||  \  |  / |   / | |\/||| / \|| || |   
+|  \__| | |||  /_ |  \_|   \ | |  ||| |-||| || |_/\
+\____/\_/ \|\____\\____|_|\_\\_/  \|\_/ \|\_/\____/ 
 
                 Copyright:  Võ Hoàng Nam
                  Zalo : 0356218930
@@ -290,7 +291,7 @@ def process_menu():
                 [-----------------------------]
 """
   print (Fore.WHITE + Style.BRIGHT + menu)
-  choice_user = input(Fore.WHITE + Style.BRIGHT + " -Lựa Chọn : ")
+  choice_user = input(Fore.WHITE + Style.BRIGHT + " -Nhập Tùy Chọn : ")
   if choice_user == '1':
     os.system('clear')
     fakeEmail()
