@@ -99,7 +99,7 @@ def checkhotmail():
   print ('')
   print (Fore.WHITE + Style.BRIGHT + ' [ \033[1;35mTool Check Hotmail ]')
   print ('')
-  print (Fore.WHITE + Style.BRIGHT + " \033[1;34m•Có thể nhập dạng MAIL|PASS")
+  print (Fore.WHITE + Style.BRIGHT + " \033[1;35m•Có thể nhập dạng MAIL|PASS")
   s = session()
   n_hotmail = 0
   hotmail = open(input(Fore.WHITE + Style.BRIGHT + " \033[0;34m-Nhập File tạo Hotmail(hotmail.txt) : ")).readlines()
@@ -282,30 +282,25 @@ ____  _     _____ ____ _  __ _      ____  _  _
 
 def process_menu():
   menu = """
-                [-----------------------------]
-                    \033[1;33m1. Tool Create Mail Ngẫu nhiên
-                    \033[1;31m2. Tool Kiểm Tra Hotmail
-                    \033[1;36m3. Tool Kiểm Tra Yahoo mail
-                    \033[1;37m4. Tool Kiểm Tra Valid
-                    \033[0;36m5. Exit
-                [-----------------------------]
+                [-----------------------------------------------]
+                |   \033[1;33m1. Tool Create Mail Ngẫu nhiên    |
+                |    \033[1;31m2. Tool Kiểm Tra Hotmail         |
+                |    \033[1;36m3. Tool Kiểm Tra Yahoo mail      |
+                |    \033[1;37m4. Tool Kiểm Tra Valid           |
+                |    \033[0;36m5. Exit                          |
+                [-----------------------------------------------]
 """
   print (Fore.WHITE + Style.BRIGHT + menu)
   choice_user = input(Fore.WHITE + Style.BRIGHT + " -Nhập Tùy Chọn : ")
   if choice_user == '1':
-    os.system('clear')
     fakeEmail()
   if choice_user == '2':
-    os.system('clear')
     checkhotmail()
   if choice_user == '3':
-    os.system('clear')
     checkyahoo()
   if choice_user == '4':
-    os.system('clear')
     checkvalid()
   if choice_user == '5':
-    os.system('clear')
     quit()
   if choice_user != '1' or '2' or '3' or '4' or '5':
     process_menu()
