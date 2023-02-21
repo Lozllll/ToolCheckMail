@@ -37,8 +37,7 @@ pkg install python && pkg install git && pkg install openssl && apt upgrade -y &
 ```
 # Screenshot:
 
-![Screenshot_20230219-102846](https://user-images.githubusercontent.com/98259155/219912497-a9ebdf26-4c71-4308-b8b1-d7c2446a9c5b.png)
-
+![Screenshot_20230221-082551](https://user-images.githubusercontent.com/98259155/220224497-2163c778-7fbe-4e76-9927-40870bf4e0ec.png)
 
 # 🌐Socials
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/hoangnamtricker.2009) [![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?logo=TikTok&logoColor=white)](https://tiktok.com/@namcony2009) 
