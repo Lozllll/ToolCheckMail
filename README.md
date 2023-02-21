@@ -11,6 +11,8 @@
 
 
 # Cài đặt (Installation)
+
+```shell script
 pkg install python
 
 pkg install git
@@ -30,6 +32,7 @@ git clone https://github.com/Lozllll/ToolCheckMail.git
 cd ToolCheckMail
 
 python vhn.py
+```
 
 # Or with one line to install:
 ```shell script
