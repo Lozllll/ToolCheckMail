@@ -1,11 +1,16 @@
 # ToolCheckMail
+**Info Tool!!!**
 
-Tool dùng để random mail hoặc check mail tùy người dùng với 3 đuôi mail:
-Gmail
-Hotmail
-Yahoo
+💌Random with 3 domain:
 
-# Cài đặt (Install)
++**Gmail**
+
++**Hotmail**
+
++**Yahoo**
+
+
+# Cài đặt (Installation)
 pkg install python
 
 pkg install git
