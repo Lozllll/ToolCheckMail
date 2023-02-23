@@ -282,13 +282,12 @@ ____  _     _____ ____ _  __ _      ____  _  _
 
 def process_menu():
   menu = """
-                [-----------------------------------------------]
-                |   \033[1;33m1. Tool Create Mail Ngẫu nhiên    |
-                |    \033[1;31m2. Tool Kiểm Tra Hotmail         |
-                |    \033[1;36m3. Tool Kiểm Tra Yahoo mail      |
-                |    \033[1;37m4. Tool Kiểm Tra Valid           |
-                |    \033[0;36m5. Exit                          |
-                [-----------------------------------------------]
+ | \033[1;33m1. Tool Create Mail Ngẫu nhiên   |
+ | \033[1;31m2. Tool Kiểm Tra Hotmail         |
+ | \033[1;36m3. Tool Kiểm Tra Yahoo mail      |
+ | \033[1;37m4. Tool Kiểm Tra Valid           |
+ | \033[0;36m5. Exit                          |
+ [--------------------------------------------]
 """
   print (Fore.WHITE + Style.BRIGHT + menu)
   choice_user = input(Fore.WHITE + Style.BRIGHT + " -Nhập Tùy Chọn : ")
