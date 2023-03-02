@@ -79,9 +79,9 @@ def fakeEmail():
   print (Fore.WHITE + Style.BRIGHT + ' [ \033[0;37mTool Random Email ]')
   print ('')
   data_kytu = ['', '_', '.']
-  so_luong = int(input(Fore.WHITE + Style.BRIGHT + " \033[0;33m-Nhập Lượng Mail : "))
-  Domain = input(Fore.WHITE + Style.BRIGHT + " \033[1;97m-Nhập Đuôi mail(ex: yahoo) : ")
-  file_email = input(Fore.WHITE + Style.BRIGHT + " \033[1;93m-Nhập File Lưu mail(mail.txt) : ")
+  so_luong = int(input(Fore.WHITE + Style.BRIGHT + " \033[0;33m-Nhập Lượng Mail (Number of mails you want) : "))
+  Domain = input(Fore.WHITE + Style.BRIGHT + " \033[1;97m-Nhập Đuôi mail (domain mail)(ex: yahoo) : ")
+  file_email = input(Fore.WHITE + Style.BRIGHT + " \033[1;93m-Nhập File Lưu mail (Save mail)(mail.txt) : ")
   n = 0
   for fake in range(so_luong):
     n += 1
@@ -99,22 +99,22 @@ def checkhotmail():
   print ('')
   print (Fore.WHITE + Style.BRIGHT + ' [ \033[1;35mTool Check Hotmail ]')
   print ('')
-  print (Fore.WHITE + Style.BRIGHT + " \033[1;35m•Có thể nhập dạng MAIL|PASS")
+  print (Fore.WHITE + Style.BRIGHT + " \033[1;35m•Có thể nhập dạng MAIL|PASS (Support Mail | Pass")
   s = session()
   n_hotmail = 0
-  hotmail = open(input(Fore.WHITE + Style.BRIGHT + " \033[0;34m-Nhập File tạo Hotmail(hotmail.txt) : ")).readlines()
-  hotmail_die = input(Fore.WHITE + Style.BRIGHT + " \033[1;96m-Nhập File Lưu Hotmail Die(lienketfb.txt) : ")
+  hotmail = open(input(Fore.WHITE + Style.BRIGHT + " \033[0;34m-Nhập File tạo Hotmail(File Creat Hotmail)(hotmail.txt) : ")).readlines()
+  hotmail_die = input(Fore.WHITE + Style.BRIGHT + " \033[1;96m-Nhập File Lưu Hotmail Die(File Hotmail die)(lienketfb.txt) : ")
   for line_hotmail in hotmail:
     n_hotmail += 1
     HotMail = line_hotmail.strip("\n")
     name_hotmail = HotMail[0:HotMail.index("@")]
-    DL = s.get("https://signup.live.com/signup?username="+name_hotmail+"@hotmail.com&lic=1")
+    DL = s.get("https://signup.live.com/signup?username="+name_hotmail+pass+"@hotmail.com&lic=1")
     kq = re.search("isAvailable",DL.text)
     if kq == None:
-      print (Fore.RED + Style.BRIGHT + " [" + str(n_hotmail) + "] \033[1;32mEmail Live : " + name_hotmail + "@hotmail.com")
+      print (Fore.RED + Style.BRIGHT + " [" + str(n_hotmail) + "] \033[1;32mEmail Live : " + name_hotmail + pass + "@hotmail.com")
     else:
       print (Fore.GREEN + Style.BRIGHT + " [" + str(n_hotmail) + "] \033[1;32mEmail Die : " + name_hotmail + "@hotmail.com")
-      open(hotmail_die,"a").write(name_hotmail + "@hotmail.com" + "\n")
+      open(hotmail_die,"a").write(name_hotmail + pass + "@hotmail.com" + "\n")
   process_menu()
 
 
@@ -122,10 +122,10 @@ def checkyahoo():
   print ("")
   print (Fore.WHITE + Style.BRIGHT + " [ \033[1;91mTool Check Yahoo ]")
   print ("")
-  print (Fore.WHITE + Style.BRIGHT + " •Có thể nhập dạng MAIL|PASS")
+  print (Fore.WHITE + Style.BRIGHT + " •Có thể nhập dạng MAIL|PASS" (Support Mail |Pass) )
   n_yahoo = 0
-  yahoo = open(input(Fore.WHITE + Style.BRIGHT + " \033[0;33m-Nhập File Yahoo(yahoo.txt) : ")).readlines()
-  yahoo_die = input(Fore.WHITE + Style.BRIGHT + " \033[0;33m-Nhập File Save Yahoo Ko sử dụng được(yahoo.txt) : ")
+  yahoo = open(input(Fore.WHITE + Style.BRIGHT + " \033[0;33m-Nhập File đã tạo vừa nãy( File(yahoo.txt) : ")).readlines()
+  yahoo_die = input(Fore.WHITE + Style.BRIGHT + " \033[0;33m-Nhập File Save Yahoo ko dùng được (can not be used)(yahoo.txt) : ")
   for line_yahoo in yahoo:
     n_yahoo += 1
     yid = line_yahoo[0:line_yahoo.index('@')]
@@ -282,15 +282,14 @@ ____  _     _____ ____ _  __ _      ____  _  _
 
 def process_menu():
   menu = """
- | \033[1;33m1. Tool Create Mail Ngẫu nhiên   |
- | \033[1;31m2. Tool Kiểm Tra Hotmail         |
- | \033[1;36m3. Tool Kiểm Tra Yahoo mail      |
- | \033[1;37m4. Tool Kiểm Tra Valid           |
- | \033[0;36m5. Exit                          |
- [--------------------------------------------]
+ | \033[1;33m1. Tool Create Mail Ngẫu nhiên (Creat Mail)               |
+ | \033[1;31m2. Tool Kiểm Tra Hotmail (Check Hotmail live or die)      |
+ | \033[1;36m3. Tool Kiểm Tra Yahoo mail (Check Yahoo Mail live or die |
+ | \033[1;37m4. Tool Kiểm Tra Valid (Check Mail link facebook          |
+ | \033[0;36m5. Exit                                                   |
 """
   print (Fore.WHITE + Style.BRIGHT + menu)
-  choice_user = input(Fore.WHITE + Style.BRIGHT + " -Nhập Tùy Chọn : ")
+  choice_user = input(Fore.WHITE + Style.BRIGHT + " -->Nhập Tùy Chọn (Select) : ")
   if choice_user == '1':
     fakeEmail()
   if choice_user == '2':
