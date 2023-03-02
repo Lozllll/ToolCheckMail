@@ -108,13 +108,13 @@ def checkhotmail():
     n_hotmail += 1
     HotMail = line_hotmail.strip("\n")
     name_hotmail = HotMail[0:HotMail.index("@")]
-    DL = s.get("https://signup.live.com/signup?username="+name_hotmail+pass+"@hotmail.com&lic=1")
+    DL = s.get("https://signup.live.com/signup?username="+name_hotmail +"@hotmail.com&lic=1")
     kq = re.search("isAvailable",DL.text)
     if kq == None:
-      print (Fore.RED + Style.BRIGHT + " [" + str(n_hotmail) + "] \033[1;32mEmail Live : " + name_hotmail + pass + "@hotmail.com")
+      print (Fore.RED + Style.BRIGHT + " [" + str(n_hotmail) + "] \033[1;32mEmail Live : " + name_hotmail + "@hotmail.com")
     else:
       print (Fore.GREEN + Style.BRIGHT + " [" + str(n_hotmail) + "] \033[1;32mEmail Die : " + name_hotmail + "@hotmail.com")
-      open(hotmail_die,"a").write(name_hotmail + pass + "@hotmail.com" + "\n")
+      open(hotmail_die,"a").write(name_hotmail + "@hotmail.com" + "\n")
   process_menu()
 
 
