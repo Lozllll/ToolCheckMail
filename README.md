@@ -19,17 +19,11 @@ pkg install git
 
 pkg install openssl
 
-apt upgrade -y
-
-pip install faker
-
-pip install colorama
-
-pip install requests
-
 git clone https://github.com/Lozllll/ToolCheckMail.git
 
 cd ToolCheckMail
+
+pip install -r requirements.txt
 
 python vhn.py
 ```
